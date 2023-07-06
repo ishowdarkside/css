@@ -1,0 +1,94 @@
+.nav{
+ 
+
+    &__left__wrapper{
+
+        display: inline-block;
+
+    }
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+
+    @include responsive(tab-land){
+        padding: 3rem;
+    }
+}
+    &__logo{
+        &__wrapper{
+            position: relative;
+
+            display: inline-block;
+            padding: 0.2rem 1.3rem;
+            text-align: center;
+            
+        }
+
+        &__border{
+            display: block;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: $color-blue;
+            
+        }
+
+        &__letter{
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+        }
+
+        &__name{
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #233348;
+            margin-left: 0.5rem;
+
+        }
+    }
+
+    &__list{    
+
+        display: flex;
+        flex-basis: 60%;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        gap: 2rem;
+        
+        //Tablet Portrait Display Hamburger
+        @include responsive(tab-port){
+          display: none;
+        }
+        &__item{
+     
+            text-align: end;
+     
+   
+            
+            &__link{
+                &:link,&:visited{
+                
+                    text-decoration: none;
+                    color: lighten($color-black,20%);
+                    
+         
+                }
+                &:hover{
+                  color: $color-black;
+                  
+               
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.btn{
+    background-color: $color-blue;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:#eee;
+    padding: 1.5rem 3rem;
+    border:none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgba(#000,.40);
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.1) translateY(-1rem);
+        box-shadow: 0 3rem 4rem rgba(#000,.30);
+    }
+
+    &:active{
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2rem 4rem rgba(#000,.50);
+    }
+}
+
+
+.btn--transparent{
+    background-color: transparent;
+    color: $color-blue;
+    border:1px solid $color-blue;
+    box-shadow: none;
+
+
+    &:hover{
+        transform:none;
+        box-shadow: none;
+    }
+
+    &:active{
+        transform:none;
+        box-shadow: none;
+    }
+}

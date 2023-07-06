@@ -1,0 +1,67 @@
+.footer{
+    background: linear-gradient(to right top,#5A98F2,#67C3F3);
+    padding: 10rem 0;
+
+    @include responsive(tab-land){
+        padding: 10rem 2rem;
+    }
+    .container{
+        display: grid;
+    grid-template-columns: 2fr repeat(3,1fr);
+    
+    grid-column-gap: 2rem;
+
+    @include responsive-custom(53.12em){
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include responsive(mobile){
+        grid-template-columns:1fr;
+    }
+    }
+
+    &__big-wrap{
+        @include responsive-custom(53.12em){
+         text-align: center;
+        }
+        &__text{
+            color: #eee;
+        }
+        &__copyright{
+            color: #eee;
+        }
+    }
+
+    &__small-wrap{
+        @include responsive-custom(53.12em){
+            text-align: center;
+           }
+        padding: 1rem;
+        ul{
+            list-style: none;
+            li{
+                color: #eee;
+            }
+        }
+        .heading-primary{
+            color: #eee;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+    }
+
+
+    .nav__logo__border{
+        background-color: #fff;
+
+    }
+    .nav__logo__letter{
+        color: $color-blue;
+    }
+
+    .nav__logo__name{
+        color: #fff;
+    }
+
+    
+}

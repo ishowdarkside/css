@@ -1,0 +1,357 @@
+.header{
+    padding: 10rem 0;
+    @include responsive(tab-land){
+        padding: 10rem 2rem;
+    }
+
+   
+    &__heading{
+        font-size: 4.5rem;
+        font-weight: bold;
+        color: $color-black;
+        line-height: 1;
+        animation: slideFromTop .9s;
+        animation-fill-mode: backwards;
+
+    }
+    &__text{
+        animation: slideFromTop .9s .7s;
+        animation-fill-mode: backwards;
+    }
+    .container{
+        display: flex;
+        gap: 15rem;
+        & > * {
+            flex-grow: 1;
+        }
+
+        @include responsive(tab-land){
+            flex-direction: column;
+        }
+    }
+    &__left__wrapper{
+      padding: 10rem 0;
+
+      @include responsive(tab-land){
+        max-width: 50%;
+      }
+
+      @include responsive(tab-port){
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__img{
+        width: 70%;
+        height: 70%;
+       @include responsive(tab-land){
+        display: none;
+       }
+
+       animation-name: slideFromRight;
+       animation-duration: .4s;
+    }
+
+  
+}
+
+
+
+.section__services{
+    padding: 10rem 0;
+    position: relative;
+
+    @include responsive(tab-land){
+        padding: 10rem 2rem;
+    }
+    .container{
+        
+        text-align: center;
+    }
+
+
+    &__wrapper{
+       position: relative;
+       z-index: 99999;
+      
+        &__img{
+           width: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+        }
+        margin-top: 8rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,35rem);
+        grid-gap: 3.5rem;
+        @include responsive-custom(56.87em){
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,35rem);
+        }
+
+        @include responsive-custom(34.37em){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,35rem);
+            text-align: center;
+        }
+    }
+    &__item{
+        opacity: 0;
+        background-color: #fff;
+    padding: 6rem 5rem 1rem 5rem;
+     box-shadow: 0 2rem 3rem rgba(#000,.10);
+     border-radius: 2rem;
+     text-align: start;
+        
+     &--1{
+        grid-column: 3 / -1;
+     }
+
+     &--2{
+       grid-row:1 / 2;
+       grid-column: 2 / 3;
+     }
+
+     &--3{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+     }
+     @include responsive-custom(34.37em){
+     
+        text-align: center;
+    }
+     &__heading{
+        font-size:2.5rem;
+        color: $color-black;
+     }
+
+     &__text{
+        margin-top: 1rem;
+    font-size: 1.6rem; 
+    }
+
+    &__img{
+        margin-bottom: 1rem;
+     
+    }
+    }
+
+    &__decoration{
+
+        &__wrapper{
+            position: absolute;
+            bottom: 10%;
+            right: 15%;
+         
+           
+         
+            gap:3rem;
+        }
+       
+        &__item{
+            width:3rem !important;
+            height: 3rem !important; 
+        }
+    }
+
+    
+   
+}
+
+
+.section__providers{
+padding: 10rem 0;
+@include responsive(tab-land){
+    padding:10rem 2rem;
+}
+    .container{
+        align-items: center;
+        display: flex;
+        gap: 15rem;
+        @include responsive-custom(62.5em){
+            gap: 5rem;
+        }
+
+        @include responsive(tab-port){
+            text-align: center;
+        }
+    }
+
+    &__img{
+  
+
+        @include responsive(tab-port){
+            display: none;
+        }
+    }
+}
+
+
+.section__commercial{
+    padding: 20rem 0;
+
+    @include responsive(tab-land){
+        padding: 20rem 2rem;
+    }
+    .container{
+        align-items: center;
+        display: flex;
+        gap: 10rem;
+
+        @include responsive(tab-land){
+            gap: 10rem;
+        }
+    }
+
+    &__img{
+       width: 100%;
+       height: 100%;
+        @include responsive(tab-port){
+            display: none;
+        }
+    }
+    &__wrapper{
+        @include responsive(tab-port){
+            text-align: center;
+        }
+    }
+}
+
+
+.section__testimonials{
+    padding: 10rem 0;
+    text-align: center;
+@include responsive(tab-land){
+    padding: 10rem 2rem;
+}
+
+    .container{
+        text-align: center;
+        padding: 8rem 10rem;
+        border-radius: 2rem;
+        background: linear-gradient(to right top,#5A98F2,#67C3F3);
+
+        @include responsive(mobile){
+            padding: 4rem 2rem;
+        }
+    }
+
+    &__heading{
+        color:lighten(#eee,10%);
+    }
+    .decoration-line{
+        background-color:lighten(#eee,10%);
+    }
+
+    &__testimonial__wrapper{
+        text-align: start;
+     
+        display: flex;
+        align-items: center;
+        @include responsive-custom(65.62em){
+            flex-direction: column;
+            text-align: center;
+  
+        }
+        & > * {
+            flex:1;
+        }
+
+        &__user{
+
+            &__img{
+                width: 20%;
+                @include responsive(tab-port){
+                    width: 50%;
+                }
+
+                &__user{
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                }
+            }
+            display:flex;
+            align-items: center;
+            &__name__wrapper{
+                margin-left: 2rem;
+               
+                color:#eee;
+                &__heading{
+                    color: lighten(#eee,10%);  
+                }
+
+                
+            }
+            
+            @include responsive-custom(65.62em){
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 5rem;
+            }
+        }
+        &__message{
+            color:#eee;
+        }
+    }
+    
+}
+
+.section__blog{
+    padding: 10rem 0;
+
+    @include responsive(tab-land){
+        padding: 10rem 2rem;
+    }
+    .container{
+        text-align: center;
+    }
+
+    &__wrapper{
+        margin-top: 5rem;
+        display: flex;
+        gap: 2.5rem;
+        & > * {
+            flex: 1;
+        }
+
+        @include responsive-custom(45em){
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        
+    }
+
+
+    &__item{
+
+        
+        @include responsive-custom(45em){
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        border-radius: 2rem;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    &__text-wrapper{
+        padding: 3rem;
+        text-align: start;
+
+        @include responsive(tab-port){
+            padding: 0;
+        }
+
+
+        .heading-primary{
+            font-size: 2rem;
+        }
+    }
+
+    }
+  
+}
